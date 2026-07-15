@@ -27,6 +27,7 @@ export default function Navbar() {
           <NavLink to="/about" onClick={closeMenu}>About</NavLink>
           <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
           <NavLink to="/register" onClick={closeMenu}>Register</NavLink>
+          <NavLink to="/courses">Courses</NavLink>
 
           <Link to="/register" className="register-btn" onClick={closeMenu}>
             Enroll Now

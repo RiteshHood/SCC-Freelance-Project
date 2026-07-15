@@ -5,6 +5,7 @@ import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import CoursesPage from "../Pages/CoursesPage";
 import NotFound from "../pages/NotFound";
 
 export default function AppRouter(){
@@ -21,6 +22,8 @@ export default function AppRouter(){
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="*" element={<NotFound/>}/>
+                <Route path="/courses" element={<CoursesPage />} />
+
 
             </Routes>
 
