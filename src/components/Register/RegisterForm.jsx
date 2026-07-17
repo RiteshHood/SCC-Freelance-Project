@@ -19,7 +19,6 @@ export default function RegisterForm() {
     className: "",
     board: "",
     school: "",
-    percentage: "",
     address: "",
     city: "",
     pincode: "",
@@ -77,8 +76,7 @@ export default function RegisterForm() {
 
     return newErrors;
   }
-
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     const validationErrors = validate();
@@ -88,37 +86,66 @@ export default function RegisterForm() {
       return;
     }
 
-    console.log(formData);
+    try {
+      const form = new FormData();
 
-    setSuccessMsg(
-      "Registration submitted successfully! We will contact you soon."
-    );
+      form.append("studentName", formData.studentName);
+      form.append("parentName", formData.parentName);
+      form.append("phone", formData.phone);
+      form.append("alternatePhone", formData.alternatePhone);
+      form.append("dob", formData.dob);
+      form.append("gender", formData.gender);
+      form.append("studentClass", formData.className);
+      form.append("board", formData.board);
+      form.append("school", formData.school);
+      form.append("address", formData.address);
+      form.append("city", formData.city);
+      form.append("pincode", formData.pincode);
 
-    setFormData({
-      studentName: "",
-      parentName: "",
-      phone: "",
-      alternatePhone: "",
-      dob: "",
-      gender: "",
-      className: "",
-      board: "",
-      school: "",
-      percentage: "",
-      address: "",
-      city: "",
-      pincode: "",
-    });
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbx_Lu6IOZtbrAWF4hL9jEil1sqrqJ0rWaucVqManbhSqtO_HeTrA05tcETUw6zb1Y0_/exec",
+        {
+          method: "POST",
+          body: form,
+        }
+      );
+
+      setSuccessMsg(
+        "Registration submitted successfully! We will contact you soon."
+      );
+
+      setFormData({
+        studentName: "",
+        parentName: "",
+        phone: "",
+        alternatePhone: "",
+        dob: "",
+        gender: "",
+        className: "",
+        board: "",
+        school: "",
+        address: "",
+        city: "",
+        pincode: "",
+      });
+
+      setErrors({});
+
+    } catch (error) {
+      console.error("Submission Error:", error);
+
+      alert(error.message);
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="register-form">
       {/* Student Name */}
 
-     <div className="section-title">
-    <FaUserGraduate />
-    <span>Personal Information</span>
-</div>
+      <div className="section-title">
+        <FaUserGraduate />
+        <span>Personal Information</span>
+      </div>
       <div className="form-group">
         <label>Student Name *</label>
 
@@ -215,9 +242,9 @@ export default function RegisterForm() {
         </select>
       </div>
       <div className="section-title">
-    <FaSchool />
-    <span>Academic Information</span>
-</div>
+        <FaSchool />
+        <span>Academic Information</span>
+      </div>
       <div className="form-group">
         <label>Class *</label>
 
@@ -275,21 +302,11 @@ export default function RegisterForm() {
         )}
       </div>
 
-      <div className="form-group">
-        <label>Previous Percentage</label>
 
-        <input
-          type="number"
-          name="percentage"
-          value={formData.percentage}
-          onChange={handleChange}
-          placeholder="Optional"
-        />
+      <div className="section-title">
+        <FaMapMarkerAlt />
+        <span>Address Information</span>
       </div>
-    <div className="section-title">
-    <FaMapMarkerAlt />
-    <span>Address Information</span>
-</div>
 
       <div className="form-group full-width">
         <label>Address *</label>

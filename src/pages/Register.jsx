@@ -46,7 +46,7 @@ export default function Register() {
 
   return (
     <>
-        <Navbar/>
+      <Navbar />
 
       <section className="register-page">
 

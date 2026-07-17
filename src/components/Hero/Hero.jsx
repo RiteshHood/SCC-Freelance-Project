@@ -38,7 +38,6 @@ export default function Hero() {
 
             <button className="primary-btn">
               Register Now
-              <FaArrowRight />
             </button>
 
             <button className="secondary-btn">
