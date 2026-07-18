@@ -6,13 +6,14 @@ import ContactPage from "../pages/ContactPage.jsx";
 import Register from "../pages/Register.jsx";
 import CoursesPage from "../pages/CoursesPage.jsx";
 import Footer from "../components/Footer/Footer.jsx";
+import ScrollToTop from "../components/scrollToTop";
 
 export default function AppRouter() {
 
     return (
 
         <BrowserRouter>
-
+             <ScrollToTop />
             <Routes>
 
                 <Route path="/" element={<Home />} />

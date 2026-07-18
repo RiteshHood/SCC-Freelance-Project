@@ -61,17 +61,17 @@ export default function Footer() {
 
           <p>
             <FaMapMarkerAlt className="footer-icon" />
-            Chhatrapati Sambhajinagar
+            Jalna
           </p>
 
           <p>
             <FaPhoneAlt className="footer-icon" />
-            +91 98765 43210
+            +91 9021467222
           </p>
 
           <p>
             <FaEnvelope className="footer-icon" />
-            shindecoaching@gmail.com
+            shahajisirji@gmail.com
           </p>
 
         </div>
@@ -84,19 +84,21 @@ export default function Footer() {
 
           <div className="social-icons">
 
-            <a href="#">
+            {/* <a href="#">
               <FaFacebookF />
-            </a>
+            </a> */}
 
-            <a href="#">
+            <a href="https://www.instagram.com/shahaji_sir_shinde_classes/">
               <FaInstagram />
             </a>
 
-            <a href="#">
+
+
+            <a href="https://wa.me/919021467222">
               <FaWhatsapp />
             </a>
 
-            <a href="#">
+            <a href="https://www.youtube.com/@sirjieducation">
               <FaYoutube />
             </a>
 

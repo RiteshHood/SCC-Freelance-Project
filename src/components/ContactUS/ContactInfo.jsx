@@ -20,8 +20,8 @@ export default function ContactInfo() {
           <p>
             Shinde Coaching Classes
             <br />
-            Chhatrapati Sambhajinagar,
-            Maharashtra
+            Siddhivinayak Nagar,
+            Chandanzira , Jalna
           </p>
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function ContactInfo() {
           <h3>Phone</h3>
 
           <a href="tel:+919876543210">
-            +91 98765 43210
+            +91 9021467222
           </a>
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function ContactInfo() {
           <h3>Email</h3>
 
           <a href="mailto:shindecoaching@gmail.com">
-            shindecoaching@gmail.com
+            shahajisirji@gmail.com          
           </a>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "./Hero.css";
 import heroImage from "../../assets/images/finalVector.jpg";
-import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { FaUserGraduate } from "react-icons/fa6";
 
 export default function Hero() {
@@ -26,23 +26,21 @@ export default function Hero() {
           </p>
 
           <div className="hero-features">
-
             <div>✔ Experienced Faculty</div>
             <div>✔ Weekly Tests</div>
             <div>✔ Personal Attention</div>
             <div>✔ Small Batch Size</div>
-
           </div>
 
           <div className="hero-buttons">
 
-            <button className="primary-btn">
+            <Link to="/register" className="primary-btn">
               Register Now
-            </button>
+            </Link>
 
-            <button className="secondary-btn">
+            <Link to="/courses" className="secondary-btn">
               Explore Courses
-            </button>
+            </Link>
 
           </div>
 
@@ -53,7 +51,7 @@ export default function Hero() {
           <img src={heroImage} alt="Students" />
 
           <div className="floating-card card1">
-            🎯 98% Results
+          98% Results
           </div>
 
           <div className="floating-card card2">
