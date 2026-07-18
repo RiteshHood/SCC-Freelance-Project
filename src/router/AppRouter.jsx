@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "../pages/Home";
-import AboutPage from "../pages/AboutPage";
-import ContactPage from "../pages/ContactPage";
-import Register from "../pages/Register";
-import Login from "../pages/Login";
-import CoursesPage from "../Pages/CoursesPage";
-import NotFound from "../pages/NotFound";
+import Home from "../pages/Home.jsx";
+import AboutPage from "../pages/AboutPage.jsx";
+import ContactPage from "../pages/ContactPage.jsx";
+import Register from "../pages/Register.jsx";
+import Login from "../pages/Login.jsx";
+import CoursesPage from "../Pages/CoursesPage.jsx";
+import NotFound from "../pages/NotFound.jsx";
 
 export default function AppRouter(){
 
